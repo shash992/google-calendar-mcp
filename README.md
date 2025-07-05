@@ -11,8 +11,18 @@ This project provides a Modular Command Platform (MCP) for interacting with Goog
 - Re-authenticate and switch Google accounts
 
 ## Setup
-1. Clone the repository.
-2. Install dependencies:
+
+### 1. Create Google OAuth Credentials
+To use this project, you need Google OAuth credentials for the Calendar API:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Under **APIs & Services → Library**, search for and enable **Google Calendar API**.
+3. Under **APIs & Services → Credentials**, click **Create Credentials** and select **OAuth client ID**.
+4. Choose **Desktop App** as the application type.
+5. Download the generated JSON file (e.g., `credentials.json`).
+6. Place `credentials.json` in your project directory.
+
+### 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -22,8 +32,8 @@ This project provides a Modular Command Platform (MCP) for interacting with Goog
    # or, using pyproject.toml
    uv pip install
    ```
-3. Place your Google API `credentials.json` in the project directory.
-4. Run the MCP server (FastMCP will handle CLI entry):
+
+### 3. Run the MCP server (FastMCP will handle CLI entry):
    ```bash
    fastmcp server.py
    ```
@@ -37,7 +47,8 @@ This project provides a Modular Command Platform (MCP) for interacting with Goog
       ]
     }
    ```
-6. On first run, authenticate with your Google account in the browser window that opens.
+
+### 4. On first run, authenticate with your Google account in the browser window that opens.
 
 ## Usage
 - Use the provided MCP tools to interact with your Google Calendar.
