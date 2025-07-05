@@ -16,6 +16,12 @@ This project provides a Modular Command Platform (MCP) for interacting with Goog
    ```bash
    pip install -r requirements.txt
    ```
+   Or, using [uv](https://github.com/astral-sh/uv) (recommended for modern Python):
+   ```bash
+   uv pip install -r requirements.txt
+   # or, using pyproject.toml
+   uv pip install
+   ```
 3. Place your Google API `credentials.json` in the project directory.
 4. Run the MCP server (FastMCP will handle CLI entry):
    ```bash
