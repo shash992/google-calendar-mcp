@@ -19,9 +19,19 @@ This project provides a Modular Command Platform (MCP) for interacting with Goog
 3. Place your Google API `credentials.json` in the project directory.
 4. Run the MCP server (FastMCP will handle CLI entry):
    ```bash
-   python server.py
+   fastmcp server.py
    ```
-5. On first run, authenticate with your Google account in the browser window that opens.
+   For usage with a MCP client, use the following MCP config
+   ```
+   "gCal": {
+      "command": "fastmcp",
+      "args": [
+        "run",
+        "/PATH/TO/FOLDER/server.py"
+      ]
+    }
+   ```
+6. On first run, authenticate with your Google account in the browser window that opens.
 
 ## Usage
 - Use the provided MCP tools to interact with your Google Calendar.
